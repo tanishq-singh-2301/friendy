@@ -1,0 +1,173 @@
+<form action="/api/submit_ans/" method="post" class="msform" id='submit_ans'>
+    <% if(data_2){ %>
+        <input style="position: absolute; top: -99999px; left: -99999px;" type="text" name="copy-url-input"
+            value="https://friend-meter.herokuapp.com/inside-game/<%- data.game_url %>/" id='copy-url-input'>
+        <span onclick="myFunction()"
+            style="width: 20vh; border:1.5px whitesmoke solid; background-color: #0f1a133b; color: whitesmoke; font-size: 1.3rem; font-weight: 500; cursor: pointer;"
+            class="action-button" id='copy-btn'>Copy Game URL</span>
+        <% } else { %>
+            <heading id='topic-1' class='get-started-now'>
+                "<%- data.created_by %>" send you
+            </heading>
+            <heading id='topic-2' class='get-started-now'>some truths</heading>
+            <p class='warning' id='warning-text'></p>
+
+            <fieldset>
+                <input id='username' required class='inputs-val-1' autocomplete="off" type="text" name="username"
+                    placeholder="Whats your name.?">
+                <input type="button" id='firstbtn' name="next" class="next action-button" value="Next">
+            </fieldset>
+
+            <fieldset class='options'>
+                <div style="position: absolute; top: -99999px; left: -99999px;">
+                    <input type="text" name="url" value="url" id='url'>
+                </div>
+                <heading class='get-started-now text'>Name the last thing you searched on Google.?</heading>
+                <br><br><br>
+                <input id='question_1' class='inputs-val-1' autocomplete="off" type="text" name="question_1"
+                    placeholder="Batao batao.!">
+                <input type="button" name="next" class="next action-button" value="Next">
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>Who is your best friend?</heading> <br><br><br>
+
+                <input type="radio" required value='<%- data.created_by %>' id="radio-btn-11" class='next'
+                    name="question_2">
+                <label for="radio-btn-11" class="btn">
+                    <%- data.created_by %>
+                </label>
+
+                <input type="radio" required value='Hell! yes, <%- data.created_by %>' id="radio-btn-12" class='next'
+                    name="question_2">
+                <label for="radio-btn-12" class="btn">
+                    Hell! yes, <%- data.created_by %>
+                </label>
+
+                <input type="radio" required value='pata nhi, kabhi sotch nhi' id="radio-btn-13" class='next'
+                    name="question_2">
+                <label for="radio-btn-13" class="btn">pata nhi, kabhi sotch nhi</label>
+
+                <input type="radio" required value='Bahut hai.' id="radio-btn-14" class='next' name="question_2">
+                <label for="radio-btn-14" class="btn last-btn">Bahut hai.</label>
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>Did you had a crush on me any time.?</heading> <br><br><br>
+
+                <input type="radio" required value='Yes.!' id="radio-btn-21" class='next' name="question_3">
+                <label for="radio-btn-21" class="btn">Yes.!</label>
+
+                <input type="radio" required value='Thoda thoda sa' id="radio-btn-22" class='next' name="question_3">
+                <label for="radio-btn-22" class="btn">Thoda thoda sa</label>
+
+                <input type="radio" required value='Nah' id="radio-btn-23" class='next' name="question_3">
+                <label for="radio-btn-23" class="btn">Nah</label>
+
+                <input type="radio" required value='tere pe...crush!!🤣🤣' id="radio-btn-24" class='next'
+                    name="question_3">
+                <label for="radio-btn-24" class="btn last-btn">tere pe...crush!!🤣🤣</label>
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>To whom you feel jealous? and why?</heading> <br><br><br>
+
+                <input id='question_4' class='inputs-val-1' autocomplete="off" type="text" name="question_4"
+                    placeholder="Jealous aur mai.😂😑">
+                <input type="button" name="next" class="next action-button" value="Next">
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>What is the first thing you notice in a girl or a boy?
+                </heading>
+                <br><br><br>
+
+                <input type="radio" required value='Looks' id="radio-btn-41" class='next' name="question_5">
+                <label for="radio-btn-41" class="btn">Looks</label>
+
+                <input type="radio" required value='Must be a BTS-fan' id="radio-btn-42" class='next' name="question_5">
+                <label for="radio-btn-42" class="btn">Must be a BTS-fan!</label>
+
+                <input type="radio" required value='Muje toh dheakte he pyar ho jata hai' id="radio-btn-43" class='next'
+                    name="question_5">
+                <label for="radio-btn-43" class="btn">Muje toh dheakte he pyar ho jata hai</label>
+
+                <input type="radio" required value='Height' id="radio-btn-44" class='next' name="question_5">
+                <label for="radio-btn-44" class="btn last-btn">Height</label>
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>What was your nickname in your childhood? Be Honest.</heading>
+                <br><br><br>
+
+                <input id='question_6' class='inputs-val-1' autocomplete="off" type="text" name="question_6"
+                    placeholder="Chod na yrr...😫">
+                <input type="button" name="next" class="next action-button" value="Next">
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>Do you like licking your plate after eathing maggie?
+                </heading> <br><br><br>
+
+                <input type="radio" required value='OHh Yes.!' id="radio-btn-61" class='next' name="question_7">
+                <label for="radio-btn-61" class="btn">OHh Yes.!</label>
+
+                <input type="radio" required value='Every one do that.' id="radio-btn-62" class='next'
+                    name="question_7">
+                <label for="radio-btn-62" class="btn">Every one do that.</label>
+
+                <input type="radio" required value='I' m not in everyone.' id="radio-btn-63" class='next'
+                    name="question_7">
+                <label for="radio-btn-63" class="btn">I'm not in everyone.</label>
+
+                <input type="radio" required value='Yrr maggie toh finish.' id="radio-btn-64" class='next'
+                    name="question_7">
+                <label for="radio-btn-64" class="btn last-btn">Yrr maggie toh finish.</label>
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>Have you ever tasted a cat or dog food?</heading> <br><br><br>
+
+                <input type="radio" required value="I don't have a pet." id="radio-btn-71" class='next'
+                    name="question_8">
+                <label for="radio-btn-71" class="btn">I don't have a pet.</label>
+
+                <input type="radio" required value='Kinda' id="radio-btn-72" class='next' name="question_8">
+                <label for="radio-btn-72" class="btn">Kinda</label>
+
+                <input type="radio" required value='Umm unn yup' id="radio-btn-73" class='next' name="question_8">
+                <label for="radio-btn-73" class="btn">Umm unn yup</label>
+
+                <input type="radio" required value='Nah' id="radio-btn-74" class='next' name="question_8">
+                <label for="radio-btn-74" class="btn last-btn">Nah</label>
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>Name your current crush.</heading> <br><br><br>
+
+                <input id='question_9' class='inputs-val-1' autocomplete="off" type="text" name="question_9"
+                    placeholder="Its just a game.">
+                <input type="button" name="next" class="next action-button" value="Next">
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>Last thing u dreamed?</heading> <br><br><br>
+
+                <input type="submit" required value='Band karo is game ko.' id="radio-btn-91"
+                    class='submit radio-submit-btn' name="question_10">
+
+                <input type="submit" required value='Oh bhai. Mai toh thak gaya' id="radio-btn-92"
+                    class='submit radio-submit-btn' name="question_10">
+
+                <input type="submit" required value='Bye Bye' id="radio-btn-93" class='submit radio-submit-btn'
+                    name="question_10">
+
+                <input type="submit" required value='Tata, Khatam' id="radio-btn-94" class='submit radio-submit-btn'
+                    name="question_10" style="border: 1.5px whitesmoke solid!important;">
+            </fieldset>
+
+            <fieldset class='options'>
+                <heading class='get-started-now text'>Thanks for participating.!</heading>
+            </fieldset>
+            <% } %>
+</form>

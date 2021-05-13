@@ -1,0 +1,13 @@
+<% for (var i=1; i <=data.total_responses; i++) { %>
+    <% try{ %>
+        <% data.responses_itself[i].answers.username %>
+            <tr>
+                <a href="https://friend-meter.herokuapp.com/response/<%= data.responses_itself[i].answers.url %>/<%- data.responses_itself[i].url_of_the_user%>"
+                    class='sections-ga' style="background-color: #0f1a133b;">
+                    <span style="font-size: calc(2vh + .5rem);">
+                        <%= data.responses_itself[i].answers.username %>
+                    </span>
+                </a>
+            </tr>
+            <% } catch { continue; } %>
+                <% } %>

@@ -1,0 +1,17 @@
+{
+    "game-infos": {
+        "current-users": 0,
+        "connected": true
+    },
+    "users": {
+        "0": {
+            "created_by": "user-name",
+            "total_game_answered": 0,
+            "game_url": 0,
+            "game_answered": {
+                "user_0": "[ 0,0,0,0,0,0,0,0,0,0 ]",
+                "user_1": "[ 0,0,0,0,0,0,0,0,0,0 ]"
+            }
+        }
+    }
+}
